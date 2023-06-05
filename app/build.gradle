@@ -36,6 +36,13 @@ android {
         viewBinding = true //可选 不用可以不写
     }
 
+    task customTask {
+        doLast {
+            println "执行自定义任务..."
+            // 在这里添加您的自定义逻辑和操作
+        }
+    }
+
 }
 
 dependencies {
@@ -53,4 +60,6 @@ dependencies {
 
     implementation 'com.github.hegaojian:MvvmHelper:1.1.9'
     kapt 'com.github.liujingxing.rxhttp:rxhttp-compiler:3.0.2'
+
+    implementation 'com.github.getActivity:ShapeView:8.5'
 }
