@@ -21,6 +21,10 @@
         android:theme="@style/Theme.MvvmKotlin"
         tools:targetApi="31">
         <activity
+            android:name=".ui.HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home" />
+        <activity
             android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -29,6 +33,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.MY_ACTION" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
